@@ -426,7 +426,7 @@ jobs:
             patch -p1 -F 3 < syscall_hooks.patch
             echo "vfs_patch完成"
             
-        - name: Apply ZRAM
+      - name: Apply ZRAM
         if: ${{ github.event.inputs.ZRAM == 'true' }}
         run: |
           cd kernel_workspace/kernel_platform/common
